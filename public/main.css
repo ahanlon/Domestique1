@@ -1,0 +1,133 @@
+/*Header*/
+.center {
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: visible;
+}
+
+.choice-box {
+	margin: 25%;
+}
+
+.navbar-brand { 
+color: #f89406; 
+
+}
+
+body {
+	background-image: url("https://teampedal.files.wordpress.com/2012/12/mountains_roads_gotthard_pass_road_through_the_desktop_2560x1600_hd-wallpaper-720723.jpeg")
+}
+
+
+#map-canvas {
+  /*top: 20%;*/
+  left: 0%;
+  height: 100%;
+  width: 69%;
+  margin: 0;
+  padding: 0;
+  float: right;
+
+}
+
+.map-container {
+	height: 400px;
+	width: 400px;
+}
+
+/*body {
+	background-color: gray;
+}*/
+
+.box-row1 {
+	height: 23%;
+	width:	100%;
+}
+
+.box-row2 {
+	height: 22em;
+	width:	100%;
+}
+
+.box-row3 {
+	height: 17%;
+	width:	100%;
+}
+
+.rideName {
+	position: relative;
+	left: 1em;
+}
+
+.box {
+	position: fixed;
+	padding: 20px;
+	border-radius: 5px;
+	top: 35%;
+	left: 5%;
+	/*right: 35%;*/
+	width: 90%;
+	height: 50%;
+	background-color: white;
+}
+
+.close-button {
+	position: relative;
+	top: 25%;
+	float: right;
+	/*display: inline-block;*/
+	text-align: center;
+	margin: auto;
+	background-color: #f89406;
+	padding: 7px 35px;
+	border-radius: 5px;
+}
+
+.close-button  a {
+	text-decoration: none;
+	color: white;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.stats-box {
+	float: right;
+	width: 69%;
+}
+
+.data{
+	margin: 0 .5%;
+	width: 17.5%;
+}
+
+.data-style {
+	width: 21%;
+}
+
+.float-left {
+	position: relative;
+	float: left;
+}
+
+.box-info {
+	display: inline-block;
+	top: 0em;
+	width: 30%;
+	height: 100%;
+}
+
+.icon-bar {
+	background-color: #f89406;
+}
+
+.form-horizontal, legend {
+	color: #f89406;
+}

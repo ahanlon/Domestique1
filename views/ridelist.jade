@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	//- This is just a sample view rendered by our index controller.
+	h1 Here are the rides you requested:
+
+	//- Placeholder ride table
+	table.table.table-striped.table-hover.hide
+		thead
+		tr
+			th Name
+			th Style
+			th Time
+			th Distance
+			th Speed
+			th Elevation
+			th Description
+		tbody
+		tr.success
+			td.nme
+			a.name.rain(href='#', data-id='00') Rain, Mud, sand, and good times
+			td.style(data-id='RS') Road Speed
+			td.time(data-id='90m') 1:27:51
+			td.dist(data-id='25mi') 20.3 mi
+			td.spd(data-id='15') 12.5 mi/h
+			td.el(data-id='1500ft') 1,145 ft
+			td.desc(data-id='zz')
+			| This ride is a great challenge of effort. Some undulation pushing you for more speed, more effort, and testing your pain threshold!
+
+
+
+
+	//- Give users a link to log out of their account
+	p: a(href="/auth/logout") Log out
