@@ -19,7 +19,7 @@ var indexController = {
   },
   ridelist: function(req, res){
     rideGoal = {
-      location_city:        $('#ridecity').val(),
+      location_city:        req.body.,
       location_state:       $('#ridestate').val(),
       moving_time:          ($('#rideTime option:selected').attr('data-id')*60), // convert mins to seconds
       distance:              ($('#rideDistance option:selected').attr('data-id')*1609.34), // convert miles to meters
