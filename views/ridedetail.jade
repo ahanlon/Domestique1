@@ -1,0 +1,47 @@
+extends layout
+
+block content
+
+
+	//----------- Ride Detail Lightbox / modal ------------>
+
+	.box.rideDetail
+		.box-row1
+			.box-info.float-left
+				h3#ride-nme.inline-block.rideName "Ride Name"
+			.stats-box
+				.panel.panel-success.inline-block.data.data-style
+					.panel-heading
+						h3.panel-title Style
+					#ride-style.panel-body
+						| "rideStyle"
+				.panel.panel-success.inline-block.data
+					.panel-heading
+						h3.panel-title Time
+					#ride-time.panel-body
+						| "rideTime"
+				.panel.panel-success.inline-block.data
+					.panel-heading
+						h3.panel-title Distance
+					#ride-dist.panel-body
+						| "rideDistance"
+				.panel.panel-success.inline-block.data
+					.panel-heading
+						h3.panel-title Speed
+					#ride-spd.panel-body
+						| "rideSpeed"
+				.panel.panel-success.inline-block.data
+					.panel-heading
+						h3.panel-title Elevation
+					#ride-el.panel-body
+						| "gain"
+		.box-row2
+			.panel.panel-info.box-info.float-left
+				.panel-heading
+					h3.panel-title Description
+				#ride-desc.panel-body
+					| "ride description"
+			#map-canvas.inline-block
+		.box-row3
+			.close-button
+				a(href='#') Close

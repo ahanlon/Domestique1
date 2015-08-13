@@ -89,16 +89,9 @@ app.get('/', indexController.index);
 // renders the list of rides
 app.get('/ridelist', indexController.ridelist);
 
-// Here is the request to pull athlete data from STRAVA
-strava.activities.get({id:227615},function(err,payload) {
-    if(!err) {
-        console.log(payload);
-        
-    }
-    else {
-        console.log(err);
-    }
-});
+// Here is the request to pull athlete data from STRAVA and renders ride detail view
+app.get('/ridedetail', indexController.ridedetail);
+
 
 // Start our server!
 var server = app.listen(3000, function() {

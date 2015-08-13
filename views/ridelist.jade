@@ -2,32 +2,26 @@ extends layout
 
 block content
 	//- This is just a sample view rendered by our index controller.
-	h1 Here are the rides you requested:
+	h1.orange Here are the rides you requested:
 
 	//- Placeholder ride table
-	table.table.table-striped.table-hover.hide
+	table.table.table-striped.table-hover
 		thead
 		tr
 			th Name
-			th Style
 			th Time
 			th Distance
-			th Speed
 			th Elevation
 			th Description
 		tbody
 		tr.success
 			td.nme
-			a.name.rain(href='#', data-id='00') Rain, Mud, sand, and good times
-			td.style(data-id='RS') Road Speed
-			td.time(data-id='90m') 1:27:51
-			td.dist(data-id='25mi') 20.3 mi
-			td.spd(data-id='15') 12.5 mi/h
-			td.el(data-id='1500ft') 1,145 ft
+				a.name.rain(href='#', data-id='00') #{rides.name}
+			td.time(data-id='90m') #{rides.moving_time}
+			td.dist(data-id='25mi') #{rides.distance}
+			td.el(data-id='1500ft') #{rides.total_elevation_gain}
 			td.desc(data-id='zz')
-			| This ride is a great challenge of effort. Some undulation pushing you for more speed, more effort, and testing your pain threshold!
-
-
+				| This ride is a great challenge of effort. Some undulation pushing you for more speed, more effort, and testing your pain threshold!
 
 
 	//- Give users a link to log out of their account
