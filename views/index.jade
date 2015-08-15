@@ -14,11 +14,11 @@ block content
 			.form-group
 				label.col-lg-2.control-label Ride City
 				.col-lg-10
-					input.form-control#ridecity(name='city'placeholder='City')
+					input.form-control#ridecity(name='city', placeholder='City')
 			.form-group
 				label.col-lg-2.control-label Ride State
 				.col-lg-10
-					input.form-control#ridestate(placeholder='State')
+					input.form-control#ridestate(name='state', placeholder='State')
 			.form-group
 				label.col-lg-2.control-label(for='select') Ride Time
 				.col-lg-10
@@ -56,7 +56,8 @@ block content
 			.form-group
 				.col-lg-10.col-lg-offset-2
 					button.btn.btn-default.goal-cancel(type='reset') Cancel
-					button.btn.btn-primary.goal-submit(type='submit') Submit
+					button.btn.btn-primary.goal-submit(type='submit')
+						a(href='/ridelist') Submit
 						
 
 

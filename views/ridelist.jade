@@ -4,25 +4,61 @@ block content
 	//- This is just a sample view rendered by our index controller.
 	h1.orange Here are the rides you requested:
 
-	//- Placeholder ride table
-	table.table.table-striped.table-hover
-		thead
-		tr
-			th Name
-			th Time
-			th Distance
-			th Elevation
-			th Description
-		tbody
-		tr.success
-			td.nme
-				a.name.rain(href='#', data-id='00') #{rides.name}
-			td.time(data-id='90m') #{rides.moving_time}
-			td.dist(data-id='25mi') #{rides.distance}
-			td.el(data-id='1500ft') #{rides.total_elevation_gain}
-			td.desc(data-id='zz')
-				| This ride is a great challenge of effort. Some undulation pushing you for more speed, more effort, and testing your pain threshold!
+	for ride in rides
+		table.table.table-striped.table-hover
+			thead
+			tr
+				th Name
+				th Time
+				th Distance
+				th Elevation
+				th Description
+			tbody
+			tr.success(data-id='#{ride.id}')
+				td.nme
+					a.name.rain #{ride.name}
+				td.time #{ride.moving_time}
+				td.dist #{ride.distance}
+				td.el #{ride.total_elevation_gain}
+				td.desc #{ride.id}
+					| This ride is a great challenge of effort. Some undulation pushing you for more speed, more effort, and testing your pain threshold!
 
+		
+		//- Ride detail model that i will show and hide	
+		.box.rideDetail.hide
+			.box-row1
+				.box-info.float-left
+					h3#ride-nme.inline-block.rideName #{ride.location_city}, #{ride.location_state}
+				.stats-box
+					.panel.panel-success.inline-block.data.data-style
+						.panel-heading
+							h3.panel-title Style
+						#ride-style.panel-body #{ride.type}
+					.panel.panel-success.inline-block.data
+						.panel-heading
+							h3.panel-title Time
+						#ride-time.panel-body #{ride.moving_time}
+					.panel.panel-success.inline-block.data
+						.panel-heading
+							h3.panel-title Distance
+						#ride-dist.panel-body #{ride.distance}
+					.panel.panel-success.inline-block.data
+						.panel-heading
+							h3.panel-title Speed
+						#ride-spd.panel-body #{ride.average_speed}
+					.panel.panel-success.inline-block.data
+						.panel-heading
+							h3.panel-title Elevation
+						#ride-el.panel-body #{ride.total_elevation_gain}
+			.box-row2
+				.panel.panel-info.box-info.float-left
+					.panel-heading
+						h3.panel-title Description
+					#ride-desc.panel-body #{ride.name}
+				#map-canvas.inline-block
+			.box-row3
+				.close-button
+					a(href='#') Close
 
 	//- Give users a link to log out of their account
 	p: a(href="/auth/logout") Log out

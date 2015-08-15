@@ -18,19 +18,12 @@ var indexController = {
     });
   },
   ridelist: function(req, res){
-    rideGoal = {
-      location_city:        req.body.,
-      location_state:       $('#ridestate').val(),
-      moving_time:          ($('#rideTime option:selected').attr('data-id')*60), // convert mins to seconds
-      distance:              ($('#rideDistance option:selected').attr('data-id')*1609.34), // convert miles to meters
-      total_elevation_gain: ($('#rideElevation option:selected').attr('data-id')*0.3048), // convert feet to meters
-    }
 
-    strava.activities.get(rideGoal,function(err, payload) {
+    strava.athlete.listActivities({},function(err, payload) {
         if(!err) {
             console.log(payload);
             var activity = payload;
-            // res.render('ridelist', {rides: activity});
+            res.render('ridelist', {rides: activity});
         }
         else {
             console.log(err);
