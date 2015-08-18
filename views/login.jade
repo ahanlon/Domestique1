@@ -12,15 +12,15 @@ block content
 
 
 	//- Form for handling existing user logins.
-	h2.text-warning Sign In
-	form(action="/auth/login", method="post")
+	h2.text-warning.center Sign In
+	form.center(action="/auth/login", method="post")
 		input(type="text", name="username", placeholder="Username")
 		input(type="password", name="password", placeholder="Password")
 		input(type="submit")
 
 	//- Form for allowing new users to register.
-	h2.text-warning Register
-	form(action="/auth/signup", method="post")
+	h2.center.text-warning Register
+	form.center(action="/auth/signup", method="post")
 		input(type="text", name="username", placeholder="Username")
 		input(type="email", name="email", placeholder="Email")
 		input(type="password", name="password", placeholder="Password")
