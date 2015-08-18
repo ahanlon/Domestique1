@@ -40,7 +40,7 @@ var app = express();
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Add in the cookieParser and flash middleware so we can
@@ -88,6 +88,8 @@ app.get('/', indexController.index);
 
 // renders the list of rides
 app.get('/ridelist', indexController.ridelist);
+
+app.post('/ridelist', indexController.storegoal);
 
 // Here is the request to pull athlete data from STRAVA and renders ride detail view
 app.get('/ridedetail', indexController.ridedetail);

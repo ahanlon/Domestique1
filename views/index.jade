@@ -8,11 +8,11 @@ block content
 	h4 Welcome, #{user.username}!
 
 	//- Choose ride form
-	form.form-horizontal.new-goal(action='/ridelist', method='POST')
-		fieldset
+	form.form-horizontal.new-goal
+		fieldsets
 			legend Choose your ride goals:
 			.form-group
-				label.col-lg-2.control-label Ride City
+				label.col-lg-2.control-label Ride city
 				.col-lg-10
 					input.form-control#ridecity(name='city', placeholder='City')
 			.form-group
@@ -22,42 +22,42 @@ block content
 			.form-group
 				label.col-lg-2.control-label(for='select') Ride Time
 				.col-lg-10
-					select#rideTime.form-control
-						option(data-id='30') 0-30mins
-						option(data-id='45') 31-45mins
-						option(data-id='60') 46-60mins
-						option(data-id='90') 61-90mins
-						option(data-id='120') 91-120mins
-						option(data-id='121') 120mins+
+					select#rideTime.form-control(name="ridetime")
+						option(value='0-30') 0-30mins
+						option(value='31-45') 31-45mins
+						option(value='46-60') 46-60mins
+						option(value='61-90') 61-90mins
+						option(value='91-120') 91-120mins
+						option(value='121-99999') 120mins+
 			.form-group
 				label.col-lg-2.control-label(for='select') Ride Distance
 				.col-lg-10
-					select#rideDistance.form-control
-						option(data-id='5') 0-5mi
-						option(data-id='15') 6-15mi
-						option(data-id='25') 16-25mi
-						option(data-id='35') 26-35mi
-						option(data-id='50') 36-50mi
-						option(data-id='75') 51-75mi
-						option(data-id='100') 76-100mi
-						option(data-id='101') 100mi+
+					select#rideDistance.form-control(name="ridedistance")
+						option(value='0-5') 0-5mi
+						option(value='6-15') 6-15mi
+						option(value='16-25') 16-25mi
+						option(value='26-35') 26-35mi
+						option(value='36-50') 36-50mi
+						option(value='51-75') 51-75mi
+						option(value='76-100') 76-100mi
+						option(value='101-500') 100mi+
 			.form-group
 				label.col-lg-2.control-label(for='select') Elevation Gain
 				.col-lg-10
-					select#rideElevation.form-control
-						option(data-id='250') 0-250ft
-						option(data-id='500') 251-500ft
-						option(data-id='1000') 501-1000ft
-						option(data-id='1500') 1001-1500ft
-						option(data-id='2500') 1501-2500ft
-						option(data-id='3500') 2501-3500ft
-						option(data-id='4500') 3501-4500ft
-						option(data-id='4501') 4500+
+					select#rideElevation.form-control(name="rideelevation")
+						option(value='0-250') 0-250ft
+						option(value='251-500') 251-500ft
+						option(value='501-1000') 501-1000ft
+						option(value='1001-1500') 1001-1500ft
+						option(value='1501-2500') 1501-2500ft
+						option(value='2501-3500') 2501-3500ft
+						option(value='3501-4500') 3501-4500ft
+						option(value='4501-100000') 4500+
 			.form-group
 				.col-lg-10.col-lg-offset-2
 					button.btn.btn-default.goal-cancel(type='reset') Cancel
-					button.btn.btn-primary.goal-submit(type='submit')
-						a(href='/ridelist') Submit
+					button.btn.btn-primary.goal-submit(type='submit') Submit
+						//-a(href="/ridelist") Submit
 						
 
 

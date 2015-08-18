@@ -24,6 +24,13 @@ body {
 	background-image: url("https://teampedal.files.wordpress.com/2012/12/mountains_roads_gotthard_pass_road_through_the_desktop_2560x1600_hd-wallpaper-720723.jpeg")
 }
 
+#map {     
+	position: absolute;
+    top: 5%;
+    left: 33%;
+    bottom: 5%;
+    width: 66%;
+}
 
 #map-canvas {
   /*top: 20%;*/
@@ -45,14 +52,14 @@ body {
 	background-color: gray;
 }*/
 
-.box-row1 {
+/*.box-row1 {
 	height: 23%;
 	width:	100%;
-}
+}*/
 
 .box-row2 {
 	height: 22em;
-	width:	100%;
+	width:	30%;
 }
 
 .box-row3 {
@@ -72,14 +79,15 @@ body {
 	top: 35%;
 	left: 5%;
 	/*right: 35%;*/
-	width: 90%;
-	height: 50%;
+	width: 86%;
+	height: 55%;
 	background-color: white;
 }
 
 .close-button {
 	position: relative;
-	top: 25%;
+	top: -1%;
+	left: 145%;
 	float: right;
 	/*display: inline-block;*/
 	text-align: center;
@@ -104,8 +112,8 @@ body {
 }
 
 .data{
-	margin: 0 .5%;
-	width: 17.5%;
+	margin: 3.1% 1.5%;
+	width: 100%;
 }
 
 .data-style {
@@ -120,8 +128,8 @@ body {
 .box-info {
 	display: inline-block;
 	top: 0em;
-	width: 30%;
-	height: 100%;
+	width: 100%;
+	height: 27%;
 }
 
 .icon-bar {

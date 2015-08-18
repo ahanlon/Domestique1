@@ -2,10 +2,16 @@ doctype html
 html(lang='en')
 head
 		meta(charset="utf-8")
-		meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+		meta(name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no')
 		title Domestique
 		link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet")
 		link(rel="stylesheet" type="text/css" href="/main.css")
+		link(href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet')
+		script(src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js')
+		script(L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ')
+			
+
+							
 
 body
 	nav.navbar
@@ -32,8 +38,6 @@ body
 							ul.dropdown-menu
 								li
 									a.choose-ride(href="#") Choose Ride
-								li
-									a.log-ride(href="#") Log Ride
 								li
 									a.nav-rides(href="#") View Ride List
 	div.container-fluid.main

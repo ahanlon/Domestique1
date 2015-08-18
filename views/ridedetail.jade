@@ -41,7 +41,10 @@ block content
 					h3.panel-title Description
 				#ride-desc.panel-body
 					| "ride description"
-			#map-canvas.inline-block
+			.inline-block#map
+				div #map
+					script L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ';
+						var map = L.mapbox.map('map', 'mapbox.streets').setView([40, -74.50], 9);
 		.box-row3
 			.close-button
 				a(href='#') Close

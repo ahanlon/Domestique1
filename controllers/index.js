@@ -1,7 +1,6 @@
 
 // adding strava api
 var strava = require('strava-v3');
-var goalVals = goalVals;
 
 // Simple index controller
 var indexController = {
@@ -17,13 +16,45 @@ var indexController = {
       user: req.user
     });
   },
-  ridelist: function(req, res){
 
+  storegoal: function(req, res){
+    req.session.goal = req.body;
+    res.send('/ridelist');
+
+  },
+
+  ridelist: function(req, res){
+    var goal = req.session.goal;
+    console.log(goal);
+
+    // get data from strava
     strava.athlete.listActivities({},function(err, payload) {
         if(!err) {
-            console.log(payload);
-            var activity = payload;
-            res.render('ridelist', {rides: activity});
+            console.log(goal.location_city);
+          // create function to filter strava data based on user 'choose ride' parameters
+            var rideMatch = function(obj){ 
+              if (goal.location_city === obj.location_city){
+                if (goal.location_state === obj.location_state){
+                  if (obj.moving_time >= (parseInt(goal.moving_time[0])*60) && obj.moving_time <= (parseInt(goal.moving_time[1])*60)){
+                    if (obj.distance >= (parseInt(goal.distance[0])*1609.34) && obj.distance <= (parseInt(goal.distance[1])*1609.34)){
+                      if (obj.total_elevation_gain >= (parseInt(goal.total_elevation_gain[0])*0.3048) && obj.total_elevation_gain <= (parseInt(goal.total_elevation_gain[1])*0.3048)){
+
+                        return true;
+                      }
+                      else {
+                        return false;
+                      }
+
+                    }
+                  }
+                }
+              }
+            }
+
+            var activity = payload.filter(rideMatch);
+            // var activity = payload;
+            res.render('ridelist', {rides: activity, 
+                                    goal: req.session.goal});
         }
         else {
             console.log(err);
