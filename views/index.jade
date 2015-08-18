@@ -23,6 +23,7 @@ block content
 				label.col-lg-2.control-label(for='select') Ride Time
 				.col-lg-10
 					select#rideTime.form-control(name="ridetime")
+						option(value='')
 						option(value='0-30') 0-30mins
 						option(value='31-45') 31-45mins
 						option(value='46-60') 46-60mins
@@ -33,6 +34,7 @@ block content
 				label.col-lg-2.control-label(for='select') Ride Distance
 				.col-lg-10
 					select#rideDistance.form-control(name="ridedistance")
+						option(value='')
 						option(value='0-5') 0-5mi
 						option(value='6-15') 6-15mi
 						option(value='16-25') 16-25mi
@@ -45,6 +47,7 @@ block content
 				label.col-lg-2.control-label(for='select') Elevation Gain
 				.col-lg-10
 					select#rideElevation.form-control(name="rideelevation")
+						option(value='')
 						option(value='0-250') 0-250ft
 						option(value='251-500') 251-500ft
 						option(value='501-1000') 501-1000ft

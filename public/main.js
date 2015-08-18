@@ -59,22 +59,25 @@ $('.new-goal').on('submit', function(e){
 
 });
 
+
 // ----- Show Ride Detail ----------------
 
 $('.name').on('click', function(){
-     var $name = $(this).closest("tr").find(".name").text();
-     var $time = $(this).closest("tr").find(".time").text();
-     var $dist = $(this).closest("tr").find(".dist").text();
-     var $el = $(this).closest("tr").find(".el").text();
-     var $loc = $(this).closest("tr").find(".loc").text();
+	// identifies the ride that was clicked and grabs the corresponding ride data and assigns values to variables
+     var $name = $(this).closest('tr').find('.name').text();
+     var $time = $(this).closest('tr').find('.time').text();
+     var $dist = $(this).closest('tr').find('.dist').text();
+     var $el = $(this).closest('tr').find('.el').text();
+     var $loc = $(this).closest('tr').find('.loc').text();
+     var $img = $(this).closest('tr').find('.poly').attr('href')
 
-
-    $("#ride-nme").text($name); // update name
-    $("#ride-time").text($time); // update time
-    $("#ride-dist").text($dist); // update distance
-    $("#ride-el").text($el); // update elevation gain
-    $("#ride-loc").text($loc); // update location
-
+    // takes the variables with the ride data and populates the detail view.
+    $('#ride-nme').text($name); // update name
+    $('#ride-time').text($time); // update time
+    $('#ride-dist').text($dist); // update distance
+    $('#ride-el').text($el); // update elevation gain
+    $('#ride-loc').text($loc); // update location
+    $('#map-img').attr('src', $img); // update image source
 
 	$('.rideDetail').removeClass('hide') // show the ride list
 });
@@ -82,15 +85,6 @@ $('.name').on('click', function(){
 $('.close-button').on('click', function(){
 	$('.rideDetail').addClass('hide')
 });
-
-
-//----------------map code---------------
-L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ';
-var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40, -74.50], 9);
-
-
-
 
 
 

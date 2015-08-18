@@ -10,44 +10,49 @@ block content
 		table.table.table-striped.table-hover
 			thead
 			tr
-				th Name
+				th.thname Name
 				th Time
 				th Distance
 				th Elevation
-				th Description
+				th.thloc Location
+				th.thmap Map
 			tbody
 			tr.success(data-id='#{ride.id}')
 				td.nme
 					a.name.rain #{ride.name}
 				td.time #{ride.moving_time}
-				td.dist #{ride.distance}
-				td.el #{ride.total_elevation_gain}
+				td.dist #{ride.distance}mi
+				td.el #{ride.total_elevation_gain}ft
 				td.loc #{ride.location_city}, #{ride.location_state}
 
+				-var mapInfo = ride.map
+				td 
+					a.poly(href='http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=640x375&path=weight:3%7Ccolor:red%7Cenc:' + '#{mapInfo.summary_polyline}') Click here to see the ride!
 		
-		//- Ride detail model that i will show and hide	
-		.box.rideDetail.hide
-			.box-row2.inline-block
-				.panel.panel-info.box-info.float-left
-					.panel-heading
-						h3#ride-nme.panel-title
-					#ride-loc.panel-body
-				.panel.panel-success.inline-block.data
-					.panel-heading
-						h3.panel-title Time
-					#ride-time.panel-body 
-				.panel.panel-success.inline-block.data
-					.panel-heading
-						h3.panel-title Distance
-					#ride-dist.panel-body 
-				.panel.panel-success.inline-block.data
-					.panel-heading
-						h3.panel-title Elevation
-					#ride-el.panel-body 
-				.inline-block
-					div#map
-				.close-button
-					a(href='#') Close
+	//- Ride detail model that i will show and hide	
+	.box.rideDetail.hide
+		.box-row2.inline-block
+			.panel.panel-info.box-info.float-left
+				.panel-heading
+					h3#ride-nme.panel-title
+				#ride-loc.panel-body
+			.panel.panel-success.inline-block.data
+				.panel-heading
+					h3.panel-title Time
+				#ride-time.panel-body 
+			.panel.panel-success.inline-block.data
+				.panel-heading
+					h3.panel-title Distance
+				#ride-dist.panel-body 
+			.panel.panel-success.inline-block.data
+				.panel-heading
+					h3.panel-title Elevation
+				#ride-el.panel-body 
+			.inline-block
+				div#map
+					img#map-img
+			.close-button
+				a(href='#') Close
 
 	//- Give users a link to log out of their account
 	p: a(href="/auth/logout") Log out

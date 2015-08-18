@@ -7,15 +7,19 @@ block content
 	if error
 		h3= error
 
+	h1.brand.text-warning.center Domestique:
+		p Because you just want to ride.
+
+
 	//- Form for handling existing user logins.
-	h1 Existing Users
+	h2.text-warning Sign In
 	form(action="/auth/login", method="post")
 		input(type="text", name="username", placeholder="Username")
 		input(type="password", name="password", placeholder="Password")
 		input(type="submit")
 
 	//- Form for allowing new users to register.
-	h1 Register
+	h2.text-warning Register
 	form(action="/auth/signup", method="post")
 		input(type="text", name="username", placeholder="Username")
 		input(type="email", name="email", placeholder="Email")

@@ -16,13 +16,35 @@
 }
 
 .orange { 
-color: #f89406; 
+	color: #f89406; 
+}
 
+.white {
+	color: #ffffff;
+}
+
+.brand {
+	font-size: 46px;
 }
 
 body {
-	background-image: url("https://teampedal.files.wordpress.com/2012/12/mountains_roads_gotthard_pass_road_through_the_desktop_2560x1600_hd-wallpaper-720723.jpeg")
+	background-image: url("https://teampedal.files.wordpress.com/2012/12/mountains_roads_gotthard_pass_road_through_the_desktop_2560x1600_hd-wallpaper-720723.jpeg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+/* -------------- table formatting----------------*/
+
+.thname {
+	width: 30%;
+}
+.thmap {
+	width: 21%;
+}
+.thloc {
+	width: 20%;
+}
+
 
 #map {     
 	position: absolute;
@@ -77,9 +99,9 @@ body {
 	padding: 20px;
 	border-radius: 5px;
 	top: 35%;
-	left: 5%;
+	left: 13%;
 	/*right: 35%;*/
-	width: 86%;
+	width: 65%;
 	height: 55%;
 	background-color: white;
 }
@@ -112,7 +134,7 @@ body {
 }
 
 .data{
-	margin: 3.1% 1.5%;
+	margin: 1% 0%;
 	width: 100%;
 }
 
@@ -130,10 +152,11 @@ body {
 	top: 0em;
 	width: 100%;
 	height: 27%;
+	margin-bottom: 0px;
 }
 
 .icon-bar {
-	background-color: #f89406;
+	background-color: #f89406;	
 }
 
 .form-horizontal, legend {

@@ -6,13 +6,10 @@ head
 		title Domestique
 		link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet")
 		link(rel="stylesheet" type="text/css" href="/main.css")
-		link(href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet')
-		script(src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js')
-		script(L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ')
-			
-
-							
-
+		//- link(href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet')
+		//- script(src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js')
+		//- script(L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ')
+		
 body
 	nav.navbar
 		div.container-fluid
@@ -23,7 +20,7 @@ body
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand.orange(href="/") Domestique
+				a.navbar-brand.text-warning(href="/") Domestique
 
 			//-- Collect the nav links, forms, and other content for toggling -->
 			div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
@@ -44,6 +41,7 @@ body
 	
 		block content
 
+	//- script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js")
