@@ -30,26 +30,25 @@ block content
 		
 	//- Ride detail model that i will show and hide	
 	.box.rideDetail.hide
-		.box-row2.inline-block
-			.panel.panel-info.box-info.float-left
-				.panel-heading
-					h3#ride-nme.panel-title
-				#ride-loc.panel-body.panel-padding
-			.panel.panel-success.inline-block.data
-				.panel-heading
-					h3.panel-title Time
-				#ride-time.panel-body.panel-padding 
-			.panel.panel-success.inline-block.data
-				.panel-heading
-					h3.panel-title Distance
-				#ride-dist.panel-body.panel-padding 
-			.panel.panel-success.inline-block.data
-				.panel-heading
-					h3.panel-title Elevation
-				#ride-el.panel-body.panel-padding 
-			.inline-block
-				div#map
-					img#map-img
-			.close-button
-				a(href='#') Close
+		//- .box-row2.inline-block
+		.panel.panel-info.inline-block.data.float-left
+			.panel-heading
+				h3#ride-nme.panel-title.center
+			#ride-loc.panel-body.panel-padding.center
+		.panel.panel-success.inline-block.data.float-left
+			.panel-heading
+				h3.panel-title.center Time
+			#ride-time.panel-body.panel-padding.center 
+		.panel.panel-success.inline-block.data.float-left
+			.panel-heading
+				h3.panel-title.center Distance
+			#ride-dist.panel-body.panel-padding.center
+		.panel.panel-success.inline-block.data.float-left
+			.panel-heading
+				h3.panel-title.center Elevation
+			#ride-el.panel-body.panel-padding.center 
+		div#map
+			img#map-img
+	.close-button
+		a(href='#') Close
 
