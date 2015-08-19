@@ -8,7 +8,7 @@ head
 		link(rel="stylesheet" type="text/css" href="/main.css")
 		
 body
-	nav.navbar
+	nav.navbar.navbar-fixed-top
 		div.container-fluid
 			//- Brand and toggle get grouped for better mobile display -->
 			div.navbar-header
@@ -37,9 +37,9 @@ body
 								li
 									a.nav-rides(href="/auth/logout") Logout
 
-	h1.brand.text-warning.center Domestique: Because you just want to ride.
 
-	div.container-fluid.main
+	div.container.main
+		h1.brand.text-warning.center Domestique: Because you just want to ride.
 	
 		block content
 

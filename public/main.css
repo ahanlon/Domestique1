@@ -33,6 +33,10 @@ body {
     background-attachment: fixed;
 }
 
+.main {
+	margin-top: 65px;
+}
+
 /* -------------- table formatting----------------*/
 
 .thname {
@@ -85,7 +89,7 @@ body {
 }
 
 .box {
-	position: fixed;
+	position: relative;
 	padding: 20px;
 	border-radius: 5px;
 	top: 35%;
