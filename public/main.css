@@ -103,8 +103,8 @@ body {
 
 .close-button {
 	position: relative;
-	bottom: 47px;
-	right: 15px;
+	bottom: 23px;
+	right: -12px;
 	float: right;
 	/*display: inline-block;*/
 	text-align: center;
