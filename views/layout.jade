@@ -6,9 +6,6 @@ head
 		title Domestique
 		link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet")
 		link(rel="stylesheet" type="text/css" href="/main.css")
-		//- link(href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet')
-		//- script(src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js')
-		//- script(L.mapbox.accessToken = 'pk.eyJ1IjoiYWhhbmxvbiIsImEiOiI1ZWJiMjc0MDNmZmI0ZWMxZDljZjNmNzBmZWI4NzhhZSJ9.xhJwrXxKBZZys2mTd0-1GQ')
 		
 body
 	nav.navbar
@@ -37,6 +34,11 @@ body
 									a.choose-ride(href="/") Choose Ride
 								li
 									a.nav-rides(href="/ridelist") View Ride List
+								li
+									a.nav-rides(href="/auth/logout") Logout
+
+	h1.brand.text-warning.center Domestique: Because you just want to ride.
+
 	div.container-fluid.main
 	
 		block content

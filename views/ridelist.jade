@@ -2,12 +2,11 @@ extends layout
 
 block content
 	//- This is just a sample view rendered by our index controller.
-	h1.orange Here are the rides you requested:
-
-	h2 
+	h1.orange Let's Ride:
+	h2.white 
 
 	for ride in rides
-		table.table.table-striped.table-hover
+		table.ridelist.table.table-striped.table-hover
 			thead
 			tr
 				th.thname Name
@@ -35,24 +34,22 @@ block content
 			.panel.panel-info.box-info.float-left
 				.panel-heading
 					h3#ride-nme.panel-title
-				#ride-loc.panel-body
+				#ride-loc.panel-body.panel-padding
 			.panel.panel-success.inline-block.data
 				.panel-heading
 					h3.panel-title Time
-				#ride-time.panel-body 
+				#ride-time.panel-body.panel-padding 
 			.panel.panel-success.inline-block.data
 				.panel-heading
 					h3.panel-title Distance
-				#ride-dist.panel-body 
+				#ride-dist.panel-body.panel-padding 
 			.panel.panel-success.inline-block.data
 				.panel-heading
 					h3.panel-title Elevation
-				#ride-el.panel-body 
+				#ride-el.panel-body.panel-padding 
 			.inline-block
 				div#map
 					img#map-img
 			.close-button
 				a(href='#') Close
 
-	//- Give users a link to log out of their account
-	p: a(href="/auth/logout") Log out

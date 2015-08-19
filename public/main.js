@@ -59,6 +59,15 @@ $('.new-goal').on('submit', function(e){
 
 });
 
+// ------- reset choose ride form on cancel ----------------
+
+$('.new-goal').on('reset', function(){
+	$('new-goal').reset()
+})
+
+
+
+
 
 // ----- Show Ride Detail ----------------
 
@@ -79,11 +88,14 @@ $('.name').on('click', function(){
     $('#ride-loc').text($loc); // update location
     $('#map-img').attr('src', $img); // update image source
 
-	$('.rideDetail').removeClass('hide') // show the ride list
+    $('.ridelist').addClass('hide') // hide the ridelist
+	$('.rideDetail').removeClass('hide') // show the ride detail
+
 });
 
 $('.close-button').on('click', function(){
 	$('.rideDetail').addClass('hide')
+	$('.ridelist').removeClass('hide') // show the ride list
 });
 
 
